@@ -44,8 +44,8 @@ Para criar uma tarefa, use o comando add seguido do título da tarefa entre aspa
 
 ```bash
 node index.js add "Estudar TypeScript na semana 5"
-Retorno esperado: ✓ Tarefa "Estudar TypeScript na semana 5" adicionada com sucesso!
 ```
+Retorno esperado: Tarefa "Estudar TypeScript na semana 5" adicionada com sucesso!
 
 2. Listar todas as tarefas
 Para visualizar as tarefas salvas (com indicador visual de status e ID):
@@ -55,11 +55,9 @@ node index.js list
 ```
 
 Retorno esperado:
-
-PLAINTEXT
---- SUAS TAREFAS ---
+"--- SUAS TAREFAS ---
 [ToDo] - Estudar TypeScript na semana 5 (ID: 1713456789123)
---------------------
+--------------------"
 
 3. Concluir uma tarefa
 Para marcar uma tarefa como feita, use o comando complete seguido do ID gerado para ela:
@@ -67,17 +65,17 @@ Para marcar uma tarefa como feita, use o comando complete seguido do ID gerado p
 ```bash
 node index.js complete 1713456789123
 ```
-PLAINTEXT
-Retorno esperado: ✓ Tarefa "Estudar TypeScript na semana 5" marcada como concluída!
 
+Retorno esperado: Tarefa "Estudar TypeScript na semana 5" marcada como concluída!
 
 4. Deletar uma tarefa
 Para remover definitivamente uma tarefa da sua lista, use o comando delete seguido do ID dela:
 
 ```bash
 node index.js delete 1713456789123
-Retorno esperado: ✓ Tarefa com ID 1713456789123 removida com sucesso!
 ```
+
+Retorno esperado: Tarefa com ID 1713456789123 removida com sucesso!
 
 📝 Aprendizados desta semana
 Durante o desenvolvimento deste projeto prático, eu pude consolidar conceitos fundamentais de backend:
