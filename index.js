@@ -21,16 +21,18 @@ async function saveTasks(tasks) {
 // Função para concluir uma tarefa pelo ID
 async function completeTask(id) {
   const tasks = await readTasks();
-  const taskIndex = tasks.findIndex(t => t.id === Number(id));
+  
+  // Convertemos ambos os IDs para String usando String() para garantir a comparação exata
+  const taskIndex = tasks.findIndex(t => String(t.id) === String(id).trim());
 
   if (taskIndex === -1) {
-    console.log(`Erro: Nenhuma tarefa encontrada com o ID: ${id}`);
+    console.log(`❌ Erro: Nenhuma tarefa encontrada com o ID: ${id}`);
     return;
   }
 
   tasks[taskIndex].completed = true;
   await saveTasks(tasks);
-  console.log(`Tarefa "${tasks[taskIndex].title}" marcada como concluída!`);
+  console.log(`✓ Tarefa "${tasks[taskIndex].title}" marcada como concluída!`);
 }
 
 // Função para deletar uma tarefa pelo ID
@@ -38,8 +40,8 @@ async function deleteTask(id) {
   const tasks = await readTasks();
   const initialLength = tasks.length;
   
-  // Filtra mantendo apenas as tarefas com ID diferente do informado
-  const filteredTasks = tasks.filter(t => t.id !== Number(id));
+  // Filtra mantendo apenas as que tem ID diferente (convertendo para String)
+  const filteredTasks = tasks.filter(t => String(t.id) !== String(id).trim());
 
   if (filteredTasks.length === initialLength) {
     console.log(`Erro: Nenhuma tarefa encontrada com o ID: ${id}`);
@@ -92,7 +94,7 @@ async function main() {
       await deleteTask(argument);
 
     } else {
-      console.log('\n💻 Comandos disponíveis:');
+      console.log('\nComandos disponíveis:');
       console.log('  node index.js add "Nome da tarefa"   -> Adiciona uma nova tarefa');
       console.log('  node index.js list                  -> Lista todas as tarefas');
       console.log('  node index.js complete <ID>         -> Conclui uma tarefa');

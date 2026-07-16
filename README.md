@@ -57,7 +57,7 @@ node index.js list
 Retorno esperado:
 ```
 --- SUAS TAREFAS ---
-[🔴 ToDo] - Estudar TypeScript na semana 5 (ID: 1713456789123)
+[ToDo] - Estudar TypeScript na semana 5 (ID: 1713456789123)
 --------------------
 ```
 
