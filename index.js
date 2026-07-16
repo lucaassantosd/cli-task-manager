@@ -26,13 +26,13 @@ async function completeTask(id) {
   const taskIndex = tasks.findIndex(t => String(t.id) === String(id).trim());
 
   if (taskIndex === -1) {
-    console.log(`❌ Erro: Nenhuma tarefa encontrada com o ID: ${id}`);
+    console.log(`Erro: Nenhuma tarefa encontrada com o ID: ${id}`);
     return;
   }
 
   tasks[taskIndex].completed = true;
   await saveTasks(tasks);
-  console.log(`✓ Tarefa "${tasks[taskIndex].title}" marcada como concluída!`);
+  console.log(`Tarefa "${tasks[taskIndex].title}" marcada como concluída!`);
 }
 
 // Função para deletar uma tarefa pelo ID
