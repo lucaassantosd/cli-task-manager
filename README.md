@@ -1,4 +1,4 @@
-# CLI Task Manager 📝
+# CLI Task Manager 📝 (Semana 1)
 
 Um gerenciador de tarefas simples e funcional rodando diretamente no terminal. Este projeto foi desenvolvido durante a **Semana 1** do cronograma de estudos para consolidar os fundamentos do Node.js, manipulação do sistema de arquivos e código assíncrono.
 
@@ -16,26 +16,45 @@ Um gerenciador de tarefas simples e funcional rodando diretamente no terminal. E
 Certifique-se de ter o Node.js instalado na sua máquina:
 * [Node.js](https://nodejs.org/)
 
-### 2. Clonar e Acessar a Pasta
-Navegue até a pasta do projeto da Semana 1:
-```bash
-cd caminho-do-seu-repositorio/semana-1
-```
-
-### 3. Iniciar a Aplicação
-Rode o script principal diretamente com o Node:
+### 2. Iniciar a Aplicação
+Navegue até a pasta do projeto e rode o script principal:
 ```bash
 node index.js
 ```
 
 ---
 
-## ⚙️ Funcionalidades
+## ⚙️ Exemplos de Uso e Comandos
 
-* **Criar Tarefa:** Adiciona uma nova tarefa à lista que é salva de forma persistente em um arquivo `tasks.json`.
-* **Listar Tarefas:** Exibe todas as tarefas cadastradas e seus respectivos status de conclusão.
-* **Marcar como Concluída:** Altera o status de uma tarefa pendente para concluída usando o ID ou índice.
-* **Remover Tarefa:** Exclui permanentemente uma tarefa do arquivo de registros.
+Ao iniciar a aplicação, um menu interativo será exibido no seu terminal. Veja como as interações funcionam na prática:
+
+### 1. Visualizando o menu interativo:
+```text
+=== GERENCIADOR DE TAREFAS ===
+1. Adicionar nova tarefa
+2. Listar todas as tarefas
+3. Concluir uma tarefa
+4. Remover uma tarefa
+5. Sair
+Escolha uma opção (1-5): 
+```
+
+### 2. Adicionando uma tarefa:
+```text
+Escolha uma opção (1-5): 1
+Digite o título da tarefa: Estudar Docker e PostgreSQL
+✓ Tarefa adicionada com sucesso!
+```
+
+### 3. Listando as tarefas ativas:
+```text
+Escolha uma opção (1-5): 2
+
+--- SUAS TAREFAS ---
+[1] [ ] Estudar Docker e PostgreSQL (ID: f5d3a2)
+[2] [✓] Configurar ambiente Node.js (ID: c2b1a9)
+--------------------
+```
 
 ---
 
